@@ -22,7 +22,64 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     transform-origin: center bottom;
 }
+/* Glow effects */
+.project-image {
+    position: relative;
+}
 
+.project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 30px rgba(0,0,0,0.1) inset;
+    transition: all 0.3s ease;
+}
+
+.project-image:hover::after {
+    box-shadow: 0 0 50px var(--secondary-color) inset;
+}
+
+/* Animated underline for headings */
+section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+/* Add to your existing CSS */
+.bg-shape {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(40px);
+    opacity: 0;
+    animation: float 20s linear infinite, fadeInOut 10s ease infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.2; }
+}
+section:hover h2::after {
+    width: 100%;
+}
 .header {
     height: 450px; /* Increased height to accommodate larger avatar */
 }
