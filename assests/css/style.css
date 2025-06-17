@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #6C63FF;
-    --secondary-color: #4D44DB;
+    --primary-color: #CF0F47;
+    --secondary-color: #FB7DA8;
     --accent-color: #FF6584;
-    --background-light: #F8F9FA;
-    --background-dark: #343A40;
-    --text-dark: #212529;
-    --text-light: #F8F9FA;
+    --background-light: #420516;
+    --background-dark: #DA6C6C;
+    --text-dark: #000;
+    --text-light: #948979;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    --transition: all 1.0s ease;
 }
 
 * {
@@ -24,6 +24,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Cursor styles */
 .cursor {
     width: 20px;
     height: 20px;
@@ -36,6 +37,119 @@ body {
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
     mix-blend-mode: difference;
 }
+
+/* Header styles */
+.portfolio-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.portfolio-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(108, 99, 255, 0.3); /* Lighter color for text behind */
+    margin: 0 4rem;
+    position: relative;
+    z-index: 1; /* Text behind the image */
+}
+
+.title-line {
+    height: 2px;
+    width: 120px;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.left-line::before,
+.right-line::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-line::before {
+    right: 0;
+}
+
+.right-line::after {
+    left: 0;
+}
+
+.avatar-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Image above text */
+    width: 200px;
+    height: 355px; /* Instagram story aspect ratio */
+    pointer-events: none; /* Allows clicking through to text */
+}
+
+.avatar-overlay-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+}
+
+/* For removing black background - assuming PNG with transparency */
+.avatar-overlay-image {
+    mix-blend-mode: multiply; /* Helps blend with background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 3.5rem;
+        margin: 0 2.5rem;
+    }
+    
+    .title-line {
+        width: 80px;
+    }
+    
+    .avatar-overlay {
+        width: 150px;
+        height: 266px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-title {
+        font-size: 2.5rem;
+        margin: 0 1.5rem;
+    }
+    
+    .title-line {
+        width: 50px;
+    }
+    
+    .avatar-overlay {
+        width: 100px;
+        height: 178px;
+    }
+}
+
+
+
+
+
 
 .cursor.hovered {
     width: 50px;
@@ -96,7 +210,7 @@ main {
 section {
     margin-bottom: 4rem;
     padding: 2rem;
-    background-color: white;
+    background-color: #7D1935;
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -223,7 +337,7 @@ section.visible {
 
 .skill-card {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -630,6 +744,6 @@ footer {
     }
     
     section {
-        padding: 1.5rem;
+        padding: 2.5rem;
     }
 }
