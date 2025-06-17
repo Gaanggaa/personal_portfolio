@@ -5,224 +5,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganga Gireesh - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=The+Seasons:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header with Portfolio Text and Avatar -->
-        <header class="header">
-            <div class="portfolio-text">PORTFOLIO</div>
-            <div class="avatar-overlay">
-                <img src="assets/images/firstimage.jpg" alt="Avatar" class="avatar-img">
+    <div class="cursor"></div>
+    
+    <header>
+        <div class="portfolio-header">
+            <div class="avatar-container">
+                <img src="assets/images/firstimage.jpg" alt="Avatar" class="avatar-large">
             </div>
-        </header>
+            <h1 class="portfolio-title">PORTFOLIO</h1>
+        </div>
+    </header>
 
-        <!-- Introduction Section -->
-        <section class="intro-section">
-            <div class="intro-image">
-                <img src="assets/images/secondimage.jpg" alt="Profile Image">
-            </div>
-            <div class="intro-text">
-                <h1>Hello, I'm <span>Ganga Gireesh</span></h1>
-                <p class="tagline">Designer & Developer</p>
+    <main>
+        <section class="profile-section">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="assets/images/secondimage.jpg" alt="Ganga Gireesh">
+                </div>
+                <div class="profile-content">
+                    <h2 class="animated-text">Hello, I'm <span class="highlight">Ganga Gireesh</span></h2>
+                    <div class="about-me editable" contenteditable="true">
+                        I'm a passionate designer and developer with expertise in UI/UX design and front-end development. 
+                        I love creating beautiful, functional interfaces that provide great user experiences. 
+                        With skills in Figma, Flutter, and web technologies, I bring ideas to life through design and code.
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <section class="about-section">
-            <h2>About Me</h2>
-            <div class="about-content" contenteditable="true">
-                I'm a passionate designer and developer with expertise in creating beautiful, functional digital experiences. 
-                My background combines technical skills with creative vision, allowing me to bridge the gap between design 
-                and development. I specialize in user-centered design and clean, efficient code.
-            </div>
-        </section>
-
-        <!-- Skills Section -->
         <section class="skills-section">
-            <h2>Skills</h2>
+            <h2 class="section-title">My Skills</h2>
             <div class="skills-grid">
-                <div class="skill-item">
+                <div class="skill-card" data-tooltip="Figma">
                     <img src="assets/images/figma.png" alt="Figma">
-                    <p>Figma</p>
                 </div>
-                <div class="skill-item">
+                <div class="skill-card" data-tooltip="Canva">
                     <img src="assets/images/canva.png" alt="Canva">
-                    <p>Canva</p>
                 </div>
-                <div class="skill-item">
+                <div class="skill-card" data-tooltip="Flutter">
                     <img src="assets/images/flutter.png" alt="Flutter">
-                    <p>Flutter</p>
                 </div>
-                <div class="skill-item">
+                <div class="skill-card" data-tooltip="Python">
                     <img src="assets/images/python.png" alt="Python">
-                    <p>Python</p>
                 </div>
-                <div class="skill-item">
+                <div class="skill-card" data-tooltip="HTML/CSS">
                     <img src="assets/images/htmlcss.png" alt="HTML/CSS">
-                    <p>HTML/CSS</p>
                 </div>
             </div>
         </section>
 
-        <!-- Education & Experience -->
-        <section class="timeline-section">
-            <div class="timeline-column">
-                <h2>Education</h2>
-                <div class="timeline-item" contenteditable="true">
-                    <h3>Degree Name</h3>
-                    <p class="date">2018 - 2022</p>
-                    <p class="description">University Name, Location</p>
+        <section class="experience-section">
+            <div class="two-column">
+                <div class="column">
+                    <h2 class="section-title">Education</h2>
+                    <div class="timeline">
+                        <div class="timeline-item editable" contenteditable="true">
+                            <h3>Degree Name</h3>
+                            <p class="date">Month Year - Month Year</p>
+                            <p>Institution Name</p>
+                            <p>Description of your education and achievements.</p>
+                        </div>
+                        <div class="timeline-item editable" contenteditable="true">
+                            <h3>Degree Name</h3>
+                            <p class="date">Month Year - Month Year</p>
+                            <p>Institution Name</p>
+                            <p>Description of your education and achievements.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-item" contenteditable="true">
-                    <h3>Degree Name</h3>
-                    <p class="date">2016 - 2018</p>
-                    <p class="description">Institution Name, Location</p>
-                </div>
-            </div>
-            <div class="timeline-column">
-                <h2>Experience</h2>
-                <div class="timeline-item" contenteditable="true">
-                    <h3>Job Title</h3>
-                    <p class="date">2021 - Present</p>
-                    <p class="description">Company Name, Location</p>
-                </div>
-                <div class="timeline-item" contenteditable="true">
-                    <h3>Job Title</h3>
-                    <p class="date">2019 - 2021</p>
-                    <p class="description">Company Name, Location</p>
+                <div class="column">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="timeline">
+                        <div class="timeline-item editable" contenteditable="true">
+                            <h3>Job Title</h3>
+                            <p class="date">Month Year - Month Year</p>
+                            <p>Company Name</p>
+                            <p>Description of your role and achievements.</p>
+                        </div>
+                        <div class="timeline-item editable" contenteditable="true">
+                            <h3>Job Title</h3>
+                            <p class="date">Month Year - Month Year</p>
+                            <p>Company Name</p>
+                            <p>Description of your role and achievements.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section class="projects-section">
-            <h2>Projects</h2>
-            <div class="project">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-card">
                 <div class="project-image">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 1">
+                    <img src="assets/images/project1.jpg" alt="Project 1">
                 </div>
-                <div class="project-details" contenteditable="true">
+                <div class="project-details editable" contenteditable="true">
                     <h3>Project Title</h3>
-                    <p>Project description goes here.</p>
-                    <a href="#" class="project-link">View Project →</a>
+                    <p>Project description goes here. Explain what the project is about, technologies used, and your role in it.</p>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
             </div>
-            <div class="project">
+            <div class="project-card">
                 <div class="project-image">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 2">
+                    <img src="assets/images/project1.jpg" alt="Project 2">
                 </div>
-                <div class="project-details" contenteditable="true">
+                <div class="project-details editable" contenteditable="true">
                     <h3>Project Title</h3>
-                    <p>Project description goes here.</p>
-                    <a href="#" class="project-link">View Project →</a>
+                    <p>Project description goes here. Explain what the project is about, technologies used, and your role in it.</p>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section class="gallery-section">
-            <h2>Gallery</h2>
-            <div class="gallery-container">
-                <button class="gallery-arrow left-arrow">&lt;</button>
-                <div class="gallery-carousel">
-                    <div class="gallery-slide active">
-                        <img src="https://via.placeholder.com/1350x1080" alt="Design 1">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="https://via.placeholder.com/1350x1080" alt="Design 2">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="https://via.placeholder.com/1350x1080" alt="Design 3">
+            <h2 class="section-title">Design Gallery</h2>
+            <div class="carousel">
+                <button class="carousel-button prev" aria-label="Previous slide">&#10094;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide current-slide">
+                            <img src="assets/images/project1.jpg" alt="Design 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/project1.jpg" alt="Design 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/project1.jpg" alt="Design 3">
+                        </div>
                     </div>
                 </div>
-                <button class="gallery-arrow right-arrow">&gt;</button>
+                <button class="carousel-button next" aria-label="Next slide">&#10095;</button>
             </div>
         </section>
 
-        <!-- Hobbies Section -->
         <section class="hobbies-section">
-            <h2>Hobbies</h2>
+            <h2 class="section-title">My Hobbies</h2>
             <div class="hobbies-grid">
-                <div class="hobby-item">
-                    <div class="hobby-circle">
-                        <i class="fas fa-pencil-alt"></i>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <img src="assets/images/drawing.png" alt="Drawing">
                     </div>
                     <p>Drawing</p>
                 </div>
-                <div class="hobby-item">
-                    <div class="hobby-circle">
-                        <i class="fas fa-film"></i>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <img src="assets/images/movies.png" alt="Movies">
                     </div>
                     <p>Movies</p>
                 </div>
-                <div class="hobby-item">
-                    <div class="hobby-circle">
-                        <i class="fas fa-baseball-ball"></i>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <img src="assets/images/cricket.png" alt="Cricket">
                     </div>
                     <p>Cricket</p>
                 </div>
-                <div class="hobby-item">
-                    <div class="hobby-circle">
-                        <i class="fas fa-paint-brush"></i>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <img src="assets/images/designing.png" alt="Designing">
                     </div>
                     <p>Designing</p>
                 </div>
             </div>
         </section>
 
-        <!-- Certification Section -->
-        <section class="certification-section">
-            <h2>Certifications</h2>
-            <div class="certification-item" contenteditable="true">
-                <h3>Certification Title</h3>
-                <p class="date">Issued Month 2023</p>
-            </div>
-            <div class="certification-item" contenteditable="true">
-                <h3>Certification Title</h3>
-                <p class="date">Issued Month 2022</p>
-            </div>
-        </section>
-
-        <!-- Social Media Section -->
-        <section class="social-section">
-            <h2>Connect With Me</h2>
-            <div class="social-links">
-                <a href="https://linkedin.com" target="_blank" class="social-link">
-                    <img src="assets/images/linkedin.png" alt="LinkedIn">
-                    <span contenteditable="true">linkedin.com/yourprofile</span>
-                </a>
-                <a href="https://github.com" target="_blank" class="social-link">
-                    <img src="assets/images/github.png" alt="GitHub">
-                    <span contenteditable="true">github.com/yourusername</span>
-                </a>
-                <a href="https://instagram.com" target="_blank" class="social-link">
-                    <img src="assets/images/instagram.png" alt="Instagram">
-                    <span contenteditable="true">instagram.com/yourhandle</span>
-                </a>
+        <section class="certifications-section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-list">
+                <div class="certification-item editable" contenteditable="true">
+                    <h3>Certification Title</h3>
+                    <p class="date">Issued Month Year</p>
+                </div>
+                <div class="certification-item editable" contenteditable="true">
+                    <h3>Certification Title</h3>
+                    <p class="date">Issued Month Year</p>
+                </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section class="contact-section">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <img src="assets/images/phone.png" alt="Phone">
-                    <span contenteditable="true">+1 (123) 456-7890</span>
+            <div class="two-column">
+                <div class="column">
+                    <h2 class="section-title">Connect With Me</h2>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img src="assets/images/linkedin.png" alt="LinkedIn">
+                            <span contenteditable="true">linkedin.com/in/yourprofile</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="assets/images/github.png" alt="GitHub">
+                            <span contenteditable="true">github.com/yourusername</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="assets/images/instagram.png" alt="Instagram">
+                            <span contenteditable="true">instagram.com/yourhandle</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <img src="assets/images/email.png" alt="Email">
-                    <span contenteditable="true">primary@example.com</span>
-                </div>
-                <div class="contact-item">
-                    <img src="assets/images/email.png" alt="Email">
-                    <span contenteditable="true">secondary@example.com</span>
+                <div class="column">
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span contenteditable="true">+1 (123) 456-7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span contenteditable="true">your.email@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span contenteditable="true">alternate.email@example.com</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ganga Gireesh. All rights reserved.</p>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
