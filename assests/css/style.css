@@ -10,6 +10,22 @@
     --dark-text: hsl(var(--primary-hue), 30%, 20%);
     --light-text: hsl(var(--primary-hue), 20%, 95%);
 }
+/* Updated Avatar Styles */
+.avatar-overlay {
+    position: relative;
+    z-index: 2;
+    width: 180px; /* Increased size */
+    height: 320px; /* Maintain ~9:16 ratio */
+    border-radius: 16px; /* More rounded corners */
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform-origin: center bottom;
+}
+
+.header {
+    height: 450px; /* Increased height to accommodate larger avatar */
+}
 
 * {
     margin: 0;
