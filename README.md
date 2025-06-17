@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganga Gireesh - Portfolio</title>
-    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=The+Seasons:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -120,28 +120,26 @@
                 </div>
             </div>
         </section>
-        <!-- Gallery Section -->
-<section class="gallery-section">
-    <h2>Gallery</h2>
-    <div class="gallery-container">
-        <button class="gallery-arrow left-arrow">&lt;</button>
-        <div class="gallery-carousel">
-            <div class="gallery-slide active">
-                <img src="assets/images/gallery/design1.jpg" alt="Design 1">
-            </div>
-            <div class="gallery-slide">
-                <img src="assets/images/gallery/design2.jpg" alt="Design 2">
-            </div>
-            <div class="gallery-slide">
-                <img src="assets/images/gallery/design3.jpg" alt="Design 3">
-            </div>
-        </div>
-        <button class="gallery-arrow right-arrow">&gt;</button>
-    </div>
-</section>
 
-        
-        
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <button class="gallery-arrow left-arrow">&lt;</button>
+                <div class="gallery-carousel">
+                    <div class="gallery-slide active">
+                        <img src="https://via.placeholder.com/600x400" alt="Design 1">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://via.placeholder.com/600x400" alt="Design 2">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://via.placeholder.com/600x400" alt="Design 3">
+                    </div>
+                </div>
+                <button class="gallery-arrow right-arrow">&gt;</button>
+            </div>
+        </section>
 
         <!-- Hobbies Section -->
         <section class="hobbies-section">
@@ -210,4 +208,22 @@
         <section class="contact-section">
             <h2>Contact</h2>
             <div class="contact-info">
-          
+                <div class="contact-item">
+                    <img src="assets/images/phone.png" alt="Phone">
+                    <span contenteditable="true">+1 (123) 456-7890</span>
+                </div>
+                <div class="contact-item">
+                    <img src="assets/images/email.png" alt="Email">
+                    <span contenteditable="true">primary@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <img src="assets/images/email.png" alt="Email">
+                    <span contenteditable="true">secondary@example.com</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
