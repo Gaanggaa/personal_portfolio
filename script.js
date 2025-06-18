@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
+    // Mobile Menu Toggle
+document.querySelector('.hamburger').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+
+// Touch support for hover effects
+if ('ontouchstart' in window) {
+  document.querySelectorAll('.project-card, .experience-card').forEach(card => {
+    card.addEventListener('touchstart', function() {
+      this.classList.toggle('touched');
+    });
+  });
+}
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
