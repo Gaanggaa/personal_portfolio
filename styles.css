@@ -6,10 +6,11 @@
     --color4: #fec5bb;
     --color5: #f08080;
     --text-color: #333;
-    --white: #FFB3BA;
+    --white: #fff;
     --black: #000;
     --exp-gap: 15px;
 }
+
 
 * {
     margin: 0;
@@ -31,7 +32,7 @@ body {
     left: 0;
     width: 100%;
     padding: 1rem 5%;
-    background-color: var(--color3);
+    background-color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
@@ -225,7 +226,7 @@ body {
 .about-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color1);
+    background-color: var(--white);
     position: relative;
 }
 
@@ -373,7 +374,7 @@ body {
 .projects-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color3);
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -488,7 +489,7 @@ body {
     gap: 0px;
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color1);
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -511,7 +512,7 @@ body {
 }
 .experience-card {
     width: 100%;
-    max-width: 250gpx;
+    max-width: 300px;
     background-color: var(--color4);
     border-radius: 10px;
     overflow: hidden;
@@ -525,7 +526,7 @@ body {
 }
 
 .experience-image {
-    height: 250px; /* Fixed height matching projects */
+    height: 300px; /* Fixed height matching projects */
     overflow: hidden;
 }
 
@@ -599,7 +600,7 @@ body {
 .gallery-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color2);
+    background-color: var(--white);
     position: relative;
 }
 
@@ -698,7 +699,7 @@ body {
 .hobbies-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color3);
+    background-color: var(--white);
     position: relative;
 }
 
@@ -722,7 +723,7 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: var(--color1);
+    background-color: var(--color4);
     display: flex;
     justify-content: center;
     align-items: center;
