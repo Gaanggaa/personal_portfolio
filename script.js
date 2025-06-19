@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
+    
     // Mobile Menu Toggle
 document.querySelector('.hamburger').addEventListener('click', function() {
   this.classList.toggle('active');

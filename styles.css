@@ -4,7 +4,7 @@
     --color2: #fcd5ce;
     --color3: #f8edeb;
     --color4: #fec5bb;
-    --color5: #FFB3BA;
+    --color5: #f08080;
     --text-color: #333;
     --white: #FFB3BA;
     --black: #000;
@@ -30,37 +30,32 @@ body {
     left: 0;
     width: 100%;
     padding: 1rem 5%;
-    background-color: var(--color1);
+    background-color: var(--color3);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
+    justify-content: center; /* Center the navbar */
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--color2);
+    width: auto; /* Remove full width */
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
-    margin-left: 2.5rem;
+    margin: 0 1.2rem; /* Adjusted spacing */
 }
 
+/* Keep all other nav-link styles the same */
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
@@ -70,7 +65,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color1);
+    color: var(--color2);
 }
 
 .nav-links a::after {
@@ -78,7 +73,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background: var(--color1);
+    background: var(--color2);
     bottom: -5px;
     left: 0;
     transition: width 0.3s ease;
@@ -88,17 +83,39 @@ body {
     width: 100%;
 }
 
+/* Mobile menu styles remain the same */
 .hamburger {
     display: none;
     cursor: pointer;
 }
 
-.hamburger .line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 5px;
-    transition: all 0.3s ease;
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--color3);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 5%;
+    }
 }
 
 /* Home Section */
@@ -207,7 +224,7 @@ body {
 .about-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color5);
+    background-color: var(--color1);
     position: relative;
 }
 
@@ -268,7 +285,7 @@ body {
 .about-text h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--color2);
+    color: var(--text-color);
 }
 
 .about-text p {
@@ -351,36 +368,43 @@ body {
 }
 
 /* Projects Section */
+/* Projects Section - Centered Layout */
 .projects-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
     background-color: var(--color3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
+
 
 .projects-section h2, .experience-section h2, .gallery-section h2, .hobbies-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: var(--color2);
+    color: var(--color5);
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    justify-items: center; /* Centers cards horizontally */
+    padding: 0 20px;
 }
 
 .project-card {
-    background-color: var(--white);
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--color4);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
-    opacity: 0;
-    transform: translateY(50px);
 }
 
 .project-card.animate {
@@ -410,7 +434,7 @@ body {
 
 .project-info h3 {
     margin-bottom: 10px;
-    color: var(--color2);
+    color: var(--color5);
 }
 
 .hidden-details {
@@ -462,7 +486,10 @@ body {
 .experience-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color4); /* Different color than projects */
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
@@ -470,27 +497,28 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: var(--color2);
+    color: var(--color5);
 }
 
 .experience-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    justify-items: center; /* Centers cards horizontally */
+    padding: 0 20px;
 }
 
 .experience-card {
-    background-color: var(--white);
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--color4);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
-    opacity: 0;
-    transform: translateY(50px);
 }
-
 .experience-card.animate {
     opacity: 1;
     transform: translateY(0);
@@ -519,7 +547,7 @@ body {
 
 .exp-info h3 {
     margin-bottom: 10px;
-    color: var(--color2);
+    color: var(--color5);
 }
 
 .hidden-details {
@@ -571,7 +599,7 @@ body {
 .gallery-section {
     min-height: 100vh;
     padding: 100px 5% 50px;
-    background-color: var(--color5);
+    background-color: var(--color2);
     position: relative;
 }
 
@@ -723,8 +751,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--color2);
-    color: var(--white);
+    background-color: var(--color1);
+    color: var(--color5);
     padding: 50px 5% 20px;
     text-align: center;
 }
@@ -747,7 +775,7 @@ body {
     width: 40px;
     height: 40px;
     background-color: var(--white);
-    color: var(--color2);
+    color: var(--color5);
     border-radius: 50%;
     margin: 0 10px;
     font-size: 1.2rem;
