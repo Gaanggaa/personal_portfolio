@@ -511,7 +511,7 @@ body {
 }
 .experience-card {
     width: 100%;
-    max-width: 350px;
+    max-width: 250gpx;
     background-color: var(--color4);
     border-radius: 10px;
     overflow: hidden;
@@ -525,7 +525,7 @@ body {
 }
 
 .experience-image {
-    height: 350px; /* Fixed height matching projects */
+    height: 250px; /* Fixed height matching projects */
     overflow: hidden;
 }
 
