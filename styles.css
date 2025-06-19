@@ -8,6 +8,7 @@
     --text-color: #333;
     --white: #FFB3BA;
     --black: #000;
+    --exp-gap: 15px;
 }
 
 * {
@@ -484,6 +485,7 @@ body {
 
 /* Experience Section - Now identical to Projects section layout */
 .experience-section {
+    gap: 0px;
     min-height: 100vh;
     padding: 100px 5% 50px;
     background-color: var(--color1);
@@ -501,15 +503,12 @@ body {
 }
 
 .experience-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    justify-items: center; /* Centers cards horizontally */
-    padding: 0 20px;
 }
-
 .experience-card {
     width: 100%;
     max-width: 350px;
@@ -518,6 +517,7 @@ body {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
+    margin: 5px;
 }
 .experience-card.animate {
     opacity: 1;
@@ -917,7 +917,20 @@ body {
         grid-template-columns: 1fr;
     }
     /* Mobile Responsiveness */
-@media (max-width: 768px) {
+    
+    @media (max-width: 1200px) {
+    .experience-container {
+        gap: 20px; /* Even smaller gap on mobile */
+        grid-template-columns: 1fr;
+        width: 95%; /* Use more screen width */
+    }
+    
+    .experience-card {
+        max-width: 100%;
+        margin: 0 5px; /* Small side margins */
+    }
+}
+@media (max-width: 1199px) {
   /* Header */
   .nav-links {
     display: none; /* Hide desktop nav */
@@ -944,6 +957,7 @@ body {
   .projects-container,
   .experience-container {
     grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px;
   }
 
   .project-image,
@@ -982,7 +996,5 @@ body {
   /* Buttons */
   .show-more {
     padding: 8px 25px;
-    font-size: 0.9rem;
-  }
-}
-}
+    font-size:medium;
+  }}}
